@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Exemplo FileReader</title>
+  </head>
+  <body>
+    <input type="file" id="input-file">
+    <img id="img-preview" src="#" alt="Preview da imagem">
+    
+    <script>
+      const inputFile = document.getElementById('input-file');
+      const imgPreview = document.getElementById('img-preview');
+      
+      inputFile.addEventListener('change', () => {
+        const file = inputFile.files[0];
+        const reader = new FileReader();
+        
+        reader.addEventListener('load', () => {
+          imgPreview.src = reader.result;
+        });
+        
+        if (file) {
+          reader.readAsDataURL(file);
+        }
+      });
+    </script>
+  </body>
+</html>

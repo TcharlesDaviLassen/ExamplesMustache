@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+</head>
+
+<body>
+  <h1>{{title}}</h1>
+  {{#description}}
+  <p>{{description}}</p>
+  {{/description}}
+  {{#items}}
+  <h2>{{title}}</h2>
+  <ul>
+    {{#list}}
+    <li>{{.}}</li>
+    {{/list}}
+  </ul>
+  {{/items}}
+  {{^items}}
+  <p>No items found.</p>
+  {{/items}}
+  {{! This is a comment. }}
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo Mustache</title>
+</head>
+<body>
+  <h1>Lista de Produtos</h1>
+  {{#produtos}}
+    <div class="produto">
+      <h2>{{nome}}</h2>
+      <p>Preço: R${{preco}}</p>
+      <p>Descrição: {{descricao}}</p>
+      <p>Fabricante: {{fabricante.nome}} - {{fabricante.pais}}</p>
+    </div>
+  {{/produtos}}
+</body>
+</html>
